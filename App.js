@@ -3,11 +3,12 @@ import React, {useState} from 'react';
 import WeatherCard from './components/WeatherCard.js'
 import cities from './data.js';
 import Location from './components/Location.js'
+import Form from './components/Form.js'
 
 
 
 function App() {
-const [location, setLocation] = useState('Dubai')
+const [location, setLocation] = useState('London')
 
     return (
         <>
@@ -16,6 +17,7 @@ const [location, setLocation] = useState('Dubai')
             <div className = "app">
                 {/* Render components here */}
             <Location data={cities} location={location} />
+            <Form location={location} setLocation={setLocation} />
             </div>
             
         </>
